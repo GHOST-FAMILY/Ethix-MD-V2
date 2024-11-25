@@ -9,14 +9,14 @@ const anticallCommand = async (m, Matrix) => {
   const text = m.body.slice(prefix.length + cmd.length).trim();
   
   // Only valid command is 'setstatusmsg'
-  if (cmd === 'setstatusmsg') {
+  if (cmd === 'setstatusmsg','statusmsgon') {
     if (!isCreator) return m.reply("*📛 THIS IS AN OWNER COMMAND*");
     
     let responseMessage;
 
     if (text) {
       config.STATUS_READ_MSG = text; // Set custom reply message
-      responseMessage = `Custom reply message has been set to: "${text}"`;
+      responseMessage = YOUR STATUS SEEN BY CYBER GHOST📍: "${text}"`;
     } else {
       responseMessage = `Usage: *${prefix}setstatusmsg <message>* to set a custom reply message.`;
     }
